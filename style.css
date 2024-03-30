@@ -9,14 +9,18 @@ body {
 }
 
 /* Glassmorphism effect for header and footer */
-header, footer {
+header,
+footer {
     backdrop-filter: blur(5px);
     background-color: rgba(255, 255, 255, 0.4);
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     padding: 20px 0;
 }
-
-header h1, footer p {
+h1{
+    text-align: center;
+}
+header h1,
+footer p {
     text-align: center;
 }
 
@@ -36,14 +40,49 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+}
+
+/* Style for the Toggle Form Button */
+#toggleFormButton {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding around the text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor changes to a pointer to indicate it's clickable */
+    font-size: 16px; /* Slightly larger text */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    margin-top: 5px;
+}
+
+#toggleFormButton:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+
+#cremp {
+    background-color: #007bff;
+    display: block;
+    color: rgb(255, 255, 255);
     padding: 10px 15px;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-li a:hover, li a:focus {
+#cremp:hover {
+    background-color: #0056b3;
+}
+
+li a:hover,
+li a:focus {
     background-color: #0056b3;
 }
 
@@ -54,7 +93,7 @@ main {
     box-shadow: none;
     margin: 40px auto;
     max-width: 100%;
-    
+
 }
 
 /* Footer Styles */
@@ -82,9 +121,12 @@ footer {
 
 /* Keyframes for link hover animation */
 @keyframes link-wobble {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-5px);
     }
@@ -97,19 +139,19 @@ footer {
 
 
 /*emp*/
-#employeeList {
+.departments {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
-    
+
 }
 
 .employee {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -119,7 +161,7 @@ footer {
 
 .employee:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .employee h2 {
@@ -128,10 +170,10 @@ footer {
 }
 
 .employee img {
-    width: auto; 
-    max-width: 100%; 
-    max-height: 200px; 
-    object-fit: cover; 
+    width: auto;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -141,3 +183,62 @@ footer {
     color: #333;
     font-size: 0.9em;
 }
+
+/* Form container */
+#createEmployeeForm {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form labels */
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Input fields */
+input[type="text"],
+select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Submit button */
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Add a pulsing effect on button click */
+button[type="submit"]:active {
+    transform: scale(0.95);
+    transition: transform 0.2s ease;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #createEmployeeForm {
+        max-width: 100%;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+
