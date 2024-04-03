@@ -242,3 +242,54 @@ button[type="submit"]:active {
 }
 
 
+/* Table Styles */
+/* Table Styles with Max Width */
+table {
+    width: 100%; /* Ensures table width is responsive to container size */
+    max-width: 50%; /* Sets the maximum width of the table to 50% of its container's width */
+    margin: 20px auto; /* Centers the table horizontally */
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+tr:hover:not(:first-child) {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+tfoot tr {
+    background-color: #007bff;
+    color: white;
+}
+
+tfoot th {
+    text-align: center;
+}
+
+tfoot td {
+    font-weight: bold;
+}
+
+/* Responsive Table */
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
